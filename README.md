@@ -3,3 +3,5 @@ This Program can be used to Transfer Data from .csv files to .txt files. It will
 
 The pattern is stored in the settings.ini together with the input folder, output folder, a header and the option to skip the first row of the .csv file.
 While the other settings can be changed via the GUI the pattern will be on display only to prevent accidental changing. To set your personal pattern you have to save it manually in the settings.ini file.
+
+The Program will go through all .csv files stored in the input folder. The output files will be saved with the same name but as .txt file inside the specified output folder.
