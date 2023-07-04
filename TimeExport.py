@@ -69,17 +69,18 @@ window.title('CSV Processing')
 window.geometry('900x500')
 
 # Read settings from settings.ini file
+os.makedirs('settings', exist_ok=True)
 config = configparser.ConfigParser()
-if not os.path.exists('settings.ini'):
+if not os.path.exists('settings/settings.ini'):
     config['DEFAULT'] = {'header': '',
                          'inFolder': '',
                          'outFolder': '',
                          'pattern': '',
                          'skip_firstrow': '0'}
-    with open('settings.ini', 'w') as configfile:
+    with open('settings/settings.ini', 'w') as configfile:
         config.write(configfile)
 else:
-    config.read('settings.ini')
+    config.read('settings/settings.ini')
 
 header_section = config['DEFAULT']['header']
 input_folder = config['DEFAULT']['inFolder']
