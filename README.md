@@ -39,11 +39,33 @@ The resulting text files always contain the header text at the top. Subsequently
 
 ## Pattern
 
-Section will be added later
+To access data of a specific column use 
+```
+row[i]
+```
+where i is the index of the column.  
+**Note:** The first column has index 0.
+
+Python methods can be used inside the pattern. This allows to alter the values. For example to remove dots from a date:
+```
+row[1].replace('.','')
+```
+**Note:** While it is useful it is also possible to inject malicious code with this pattern. Because the data processing calls the eval method with this patten as argument always check the pattern before processing data.
+
+Text and characters that should always be the same are written in quotation marks:
+```
+'text'
+```
+
+These fragments can be put together using the + sign:
+```
+row[3] + ';' + row[5] + '\n'
+```
+Use the '\n' fragment at the end of the pattern to write each line of the .csv file into a new line in the output file.
 
 ## Example usecase
 
-Section will be added later
+An example would be if the time attendance system of a company stores the date in a .csv file. Their tax consultant can import the data into LODAS from text files if they have a specific format. To create such text files with the data of the .csv files the settings of the settings_example.ini can be used.
 
 ## Multiple settings
 
