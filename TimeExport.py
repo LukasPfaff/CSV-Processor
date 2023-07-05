@@ -128,7 +128,7 @@ header_text.grid(row=3, column=1, padx=0, pady=10, sticky="we")
 header_text.insert(tk.END, header_section)
 
 # Create the save button
-save_button = tk.Button(window, text="Save", command=save_config, font=("Arial", 12))
+save_button = tk.Button(window, text="Save", command=save_config, font=("Arial", 12), cursor="hand2")
 save_button.grid(row=5, column=1, padx=10, pady=20, sticky="e")
 
 # Create the skip first row checkbox
@@ -137,7 +137,7 @@ skip_firstrow_check = tk.Checkbutton(window, text="Skip first row", variable=ski
 skip_firstrow_check.grid(row=5, column=1, padx=(0, 10), pady=10, sticky="w")
 
 # Create the process button
-process_button = tk.Button(window, text="Export Data", command=process_folders, font=("Arial", 12), bg="green", fg="white")
+process_button = tk.Button(window, text="Export Data", command=process_folders, font=("Arial", 12), bg="green", fg="white", cursor="hand2")
 process_button.grid(row=6, column=1, padx=10, pady=20)
 
 # Configure column 1 to expand when the window is resized
