@@ -70,7 +70,7 @@ An example would be if the time attendance system of a company stores the date i
 ## Multiple settings
 
 For different use cases it can be useful to have multiple settings file. Simply Copy the settings.ini file and rename it (settings_usecase.ini). Now you can change the settings for a new use case. To go back to your original usecase rename the settings.ini and then rename the settings_usecase.ini back to settings.ini.  
-**Note:** replace usecase with a descriptive tem
+**Note:** replace usecase with a descriptive term
 
 ## Error handling
   
