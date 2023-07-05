@@ -1,12 +1,12 @@
 # TimeExport
 
-This Program can be used to Transfer Data from .csv files to .txt files. It will use a pattern to retrieve select columns from the .csv file and writing them down in the text file by using the eval method on the pattern. 
+This program can be used to transfer Data from .csv files to .txt files. It will use a pattern to retrieve select columns from the .csv file and writing them down in the text file by using the eval method on the pattern. 
 
 ## Installation
 
 [Python](https://www.python.org/downloads/) is necessary to use/install this Program. While going through the installer make sure to add it to the PATH variable.
 
-To simply use the script open powershell and navigate to the Folder where you saved the TimeExport.py file. Run the script using the following command:
+To simply use the script open powershell and navigate to the folder where you saved the TimeExport.py file. Run the script using the following command:
 ```
 python TimeExport.py
 ```
@@ -38,6 +38,10 @@ The export process will read all .csv files inside the given input folder. For e
 The resulting text files always contain the header text at the top. Subsequently each line of the .csv file is written as specified in the pattern.
 
 ## Pattern
+
+Section will be added later
+
+## Example usecase
 
 Section will be added later
 
