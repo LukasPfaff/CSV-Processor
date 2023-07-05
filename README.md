@@ -20,7 +20,8 @@ Now use the pyinstaller to build the program with this command:
 pyinstaller --noconsole TimeExport.py
 ```
 
-Inside the just created 'dist' folder will be a folder called 'TimeExport'. This folder contains the whole Program and can be copied to wherever you want your installation to be saved. To easily find the TimeExport.exe order the contents of the folder by 'Type' and it will appear at the top.
+Inside the just created 'dist' folder will be a folder called 'TimeExport'. This folder contains the whole Program and can be copied to wherever you want your installation to be saved. To easily find the TimeExport.exe order the contents of the folder by 'Type' and it will appear at the top.  
+Optionally you can use the option --onefile when biulding the program. This will generate a single executable that contains all the dependencies. However this executable takes a rather long time to start.
 
 ## Usage
 
