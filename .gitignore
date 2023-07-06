@@ -1,0 +1,7 @@
+# Ignore everything
+*
+
+# Except the python script, settings example and readme
+!.gitignore
+!TimeExport.py 
+!settings_example.ini
