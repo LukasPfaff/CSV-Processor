@@ -54,12 +54,11 @@ def process_folders():
 
 def save_config():
     config['DEFAULT']['header'] = header_text.get("1.0", tk.END).strip()
-    config['DEFAULT']['pattern'] = pattern_entry.get()
     config['DEFAULT']['inFolder'] = input_folder_entry.get()
     config['DEFAULT']['outFolder'] = output_folder_entry.get()
     config['DEFAULT']['skip_firstrow'] = str(skip_firstrow.get())
 
-    with open('settings.ini', 'w') as configfile:
+    with open('settings/settings.ini', 'w') as configfile:
         config.write(configfile)
     print("Config saved!")
 
