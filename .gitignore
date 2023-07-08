@@ -5,3 +5,4 @@
 !.gitignore
 !TimeExport.py 
 !settings_example.ini
+!CSVProcessor.py
