@@ -41,7 +41,7 @@ On the Graphical User Interface you have several options:
 - select input folder
 - select output folder
 - change header text
-- -select delimiter
+- select delimiter
 - skip first line option
 
 The save button saves these values to the settings file inside the appdata folder (will be created by the program). 
