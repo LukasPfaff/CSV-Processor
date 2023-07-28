@@ -52,7 +52,7 @@ def process_csv(input_file):
     output_file = os.path.splitext(output_file)[0] + '.txt'
 
     with open(input_file, 'r') as csv_file, open(output_file, 'w') as txt_file:
-        csv_reader = csv.reader(csv_file, delimiter=delim)
+        csv_reader = csv.reader(csv_file, delimiter=delimiter_combobox.get())
         if skip_firstrow.get():
             next(csv_reader)  # Skip the header row if present
 
@@ -95,6 +95,7 @@ def save_config():
     config['DEFAULT']['inFolder'] = input_folder_entry.get()
     config['DEFAULT']['outFolder'] = output_folder_entry.get()
     config['DEFAULT']['skip_firstrow'] = str(skip_firstrow.get())
+    config['DEFAULT']['pattern'] = pattern_entry.get()
     config['DEFAULT']['delim'] = str(delimiter_combobox.current())
 
     global ini_path
