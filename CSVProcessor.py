@@ -5,10 +5,33 @@ from tkinter.scrolledtext import ScrolledText
 from tkinter import messagebox
 from tkinter import ttk
 from appdirs import user_data_dir
+from datetime import datetime, timedelta
 import csv
 import glob
 import os
 import configparser
+
+def last_day(date_str):
+    try:
+        # Parse the input date string to obtain the month and year
+        date_format = '%d.%m.%Y'
+        date_obj = datetime.strptime(date_str, date_format)
+        year = date_obj.year
+        month = date_obj.month
+
+        # Calculate the last day of the next month
+        next_month = (month % 12) + 1
+        if next_month == 1:
+            year += 1
+
+        next_month_first_day = datetime(year, next_month, 1)
+        last_day = next_month_first_day - timedelta(days=1)
+
+        # Format and return the last day of the month as a string
+        return last_day.strftime(date_format)
+
+    except ValueError:
+        return "Invalid date format. Please use 'dd.mm.yyyy'."
 
 def select_ini_file():
     global ini_path
