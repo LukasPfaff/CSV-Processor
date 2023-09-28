@@ -32,7 +32,51 @@ def last_day(date_str):
 
     except ValueError:
         return "Invalid date format. Please use 'dd.mm.yyyy'."
+    
+def calendar_week(date_str):
+    try:
+        # Convert the date string to a datetime object
+        date = datetime.strptime(date_str, '%d.%m.%Y')
+        
+        # Adjust the date to have Monday as the first day of the week
+        # Week numbers will range from 1 to 53
+        calendar_week = date.strftime('%U')
+        
+        return str(calendar_week)
 
+    except ValueError:
+        return "Invalid date format. Please use 'dd.mm.yyyy'."
+    
+def weekday(date_str):
+    try:
+        # Convert the date string to a datetime object
+        date = datetime.strptime(date_str, '%d.%m.%Y')
+        
+        # Define a list of German weekday abbreviations
+        weekday_abbreviations = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
+        
+        # Get the weekday (0 for Monday, 1 for Tuesday, ..., 6 for Sunday)
+        weekday = date.weekday()
+        
+        # Return the corresponding abbreviation
+        return weekday_abbreviations[weekday]
+
+    except ValueError:
+        return "Invalid date format. Please use 'dd.mm.yyyy'."
+    
+def calendar_day(date_str):
+    try:
+        # Convert the date string to a datetime object
+        date = datetime.strptime(date_str, '%d.%m.%Y')
+        
+        # Get the calendar day as a string (e.g., "28" for "28.09.2023")
+        calendar_day = date.strftime('%d')
+        
+        return str(calendar_day)  
+
+    except ValueError:
+        return "Invalid date format. Please use 'dd.mm.yyyy'."
+    
 def select_ini_file():
     global ini_path
     ini_path_obj = askopenfile(initialdir=appdata_path)
