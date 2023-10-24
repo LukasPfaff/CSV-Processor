@@ -33,6 +33,17 @@ def last_day(date_str):
     except ValueError:
         return "Invalid date format. Please use 'dd.mm.yyyy'."
     
+def first_day(date_str):
+    try:
+        date_format = '%d.%m.%Y'
+        date_obj = datetime.strptime(date_str, date_format)
+        first_day = datetime(date_obj.year, date_obj.month, 1)
+
+        return first_day.strftime(date_format)
+
+    except ValueError:
+        return "Invalid date format. Please use 'dd.mm.yyyy'."
+    
 def calendar_week(date_str):
     try:
         # Convert the date string to a datetime object
@@ -77,6 +88,19 @@ def calendar_day(date_str):
     except ValueError:
         return "Invalid date format. Please use 'dd.mm.yyyy'."
     
+def la_eigen_to_as(la_eigen_str):
+    switch_dict = {
+        "400": "1", # geleistete Arbeit
+        "410": "U", # Urlaub
+        "420": "K", # Krank
+        "430": "F", # Feiertag
+        "195": "SU",# Sonderurlaub
+        "402": "S", # geleistete Arbeit in der Schweiz
+        "512": "WA" # witterungsbedingter Ausfall
+    }
+
+    return switch_dict.get(la_eigen_str, "-")
+
 def select_ini_file():
     global ini_path
     ini_path_obj = askopenfile(initialdir=appdata_path)
