@@ -51,7 +51,7 @@ def calendar_week(date_str):
         
         # Adjust the date to have Monday as the first day of the week
         # Week numbers will range from 1 to 53
-        calendar_week = date.strftime('%U')
+        calendar_week = date.isocalendar().week
         
         return str(calendar_week)
 
